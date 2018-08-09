@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import './App.css'
+
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
@@ -22,16 +24,16 @@ class App extends React.Component {
     getWeather = async (e) => {
         // event object. Prevent default behavior of this component, in this example it prevents the component from reloading page
         e.preventDefault();
-        
+
         const city = e.target.elements.city.value;
         const country = e.target.elements.country.value;
-        
+
         // async await makes an api call. ` ` are template strings
         const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`);
-        
+
         // converts the api call to json format
         const data = await api_call.json();
-        
+
         // Will only set the state if the city and country values have been entered
         if (city && country) {
             console.log(data);
@@ -46,7 +48,7 @@ class App extends React.Component {
         } else {
             console.log(data);
             this.setState({
-                temperature: undefined, 
+                temperature: undefined,
                 city: undefined,
                 country: undefined,
                 humidity: undefined,
