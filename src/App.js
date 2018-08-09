@@ -29,7 +29,7 @@ class App extends React.Component {
         const country = e.target.elements.country.value;
 
         // async await makes an api call. ` ` are template strings
-        const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`);
+        const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`);
 
         // converts the api call to json format
         const data = await api_call.json();
