@@ -8,6 +8,8 @@ body {
 
 .wrapper {
   background: linear-gradient(to right, #e67e22, #e74c3c);
+  /* background: linear-gradient(to right, #96B8DC, #2869B0); */
+  /* background: linear-gradient(to right, #004049, #07939C); */
   height: 100vh;
   display: flex;
   justify-content: center;
